@@ -1,6 +1,8 @@
 package com.example.autoscorllview.danmu;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.net.Uri;
 import android.os.Bundle;
 
 import android.app.Activity;
@@ -286,9 +288,9 @@ public class LoadManmuActivity extends AppCompatActivity implements View.OnClick
                     mediaPlayer.start();
                 }
             });
-            mVideoView.setVideoPath(Environment.getExternalStorageDirectory() + "/1.flv");
+            //mVideoView.setVideoPath(Environment.getExternalStorageDirectory() + "/1.flv");
+            mVideoView.setVideoURI(Uri.parse("http://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4"));
         }
-
     }
 
     @Override
