@@ -391,13 +391,12 @@ public class LoadManmuActivity extends AppCompatActivity implements View.OnClick
         }
         // for(int i=0;i<100;i++){
         // }
-        //danmaku.text = "这是一条弹幕" + System.nanoTime();
-        danmaku.text = "test";
+        danmaku.text = "这是一条弹幕" + System.nanoTime();
         danmaku.padding = 5;
         danmaku.priority = 100;  // 低优先级可能会被各种过滤器过滤并隐藏显示
         danmaku.isLive = islive;
-        danmaku.setTime(mDanmakuView.getCurrentTime() + 10);
-        danmaku.textSize = 55f * (mParser.getDisplayer().getDensity() - 0.6f);
+        danmaku.setTime(mDanmakuView.getCurrentTime() + 10);//滚动时间
+        danmaku.textSize = 25f * (mParser.getDisplayer().getDensity() - 0.6f);
         danmaku.textColor = Color.RED;
         //danmaku.textShadowColor = Color.WHITE;//文字描边颜色
         // danmaku.underlineColor = Color.GREEN;
