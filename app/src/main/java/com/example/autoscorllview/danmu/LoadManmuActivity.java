@@ -385,27 +385,24 @@ public class LoadManmuActivity extends AppCompatActivity implements View.OnClick
     };
 
     private void addDanmaku(boolean islive) {
-        Log.d("弹幕状态：","纯文字弹幕");
         BaseDanmaku danmaku = mContext.mDanmakuFactory.createDanmaku(BaseDanmaku.TYPE_SCROLL_RL);
         if (danmaku == null || mDanmakuView == null) {
-            Log.d("弹幕状态：","danmaku == null");
             return;
         }
         // for(int i=0;i<100;i++){
         // }
         //danmaku.text = "这是一条弹幕" + System.nanoTime();
-        danmaku.text = "这是一条弹幕法律框架的房间爱上动画根深蒂固大范甘迪三个地方反倒是更好的时光的双方各豆腐干的时候广东省大范甘迪三个地方施工的时候鬼地方个地方官豆腐干的时候广东省公司";
+        danmaku.text = "test";
         danmaku.padding = 5;
-        danmaku.priority = 0;  // 可能会被各种过滤器过滤并隐藏显示
+        danmaku.priority = 100;  // 低优先级可能会被各种过滤器过滤并隐藏显示
         danmaku.isLive = islive;
-        danmaku.setTime(mDanmakuView.getCurrentTime() + 1200);
-        danmaku.textSize = 25f * (mParser.getDisplayer().getDensity() - 0.6f);
+        danmaku.setTime(mDanmakuView.getCurrentTime() + 10);
+        danmaku.textSize = 55f * (mParser.getDisplayer().getDensity() - 0.6f);
         danmaku.textColor = Color.RED;
-        danmaku.textShadowColor = Color.WHITE;
+        //danmaku.textShadowColor = Color.WHITE;//文字描边颜色
         // danmaku.underlineColor = Color.GREEN;
-        danmaku.borderColor = Color.GREEN;
+        //danmaku.borderColor = Color.GREEN;//文字边框颜色
         mDanmakuView.addDanmaku(danmaku);
-        Log.d("弹幕状态：","加载弹幕");
 
     }
 
